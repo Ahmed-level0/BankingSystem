@@ -1,0 +1,54 @@
+void bankSystemDisplay::displayClientsMenu(){
+    cout << "Here's the Clients menu" << endl;
+    cout << "1 - To display all the clients press 1 " << endl;
+    cout << "2 - To adjust a client press 2 " << endl;
+    cout << "3 - To add a client press 3 " << endl;
+    cout << "4 - To go back press 4 " << endl;
+    cout << "5 - To Exit press 5 " << endl;
+    cout << "Please enter your choice: ";
+    cin >> bankSystemDisplay::choice;
+
+    switch (bankSystemDisplay::choice) {
+
+      case 1:
+        bankSystemDisplay::displayClients(clients);
+      displayClientsMenu();
+      break;
+
+      case 2:
+        cout<<"Please enter the client name: ";
+      cin>>clientname;
+      cout<<"Please enter the client id: ";
+      cin>>clientid;
+      bankSystemDisplay::adjustClient(clientname, clientid);
+      break;
+
+      case 3:
+        cout << "Please enter the client name: ";
+      cin >> clientname;
+      int age;
+      cout << "Please enter the client age: ";
+      cin>>age;
+      cout << "Please enter the client email: ";
+      cin>>email;
+      cout << "Please enter the client password: ";
+      cin>>password;
+      float balance;
+      cout << "Please enter the client balance: ";
+      cin>>balance;
+      bankSystemDisplay::addClient(clients, clientname,age,password, email,balance);
+
+      cout<<"----------------------------"<<endl;
+      cout<<"Client added succesfully"<<endl;
+      cout<<"----------------------------"<<endl;
+      displayClientsMenu();
+      break;
+
+      case 4:
+        displayMenu();
+      break;
+
+      default:
+        break;
+    }
+  }
