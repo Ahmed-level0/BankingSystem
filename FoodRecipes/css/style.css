@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+p,
+h1{
+    font-family: "Playwrite CU", cursive;
+}
+h1{
+    background-image: radial-gradient(circle,   rgba(148,187,233,1) 50%,rgba(238,174,202,1) 50%) ;
+    font-weight: bold;
+    background-clip: text;
+    color: transparent;
+}
+.container{
+    width: 85%;
+}
+.recipe{
+    background-color: rgb(255, 255, 255, 0.8);
+    border:solid 3px rgb(238,174,202);
+    border-radius:0.7rem;
+    width: 32%;
+    transition-duration: 0.4s;
+}
+.recipe:hover{
+    transform: scale(1.080);
+    background-color: rgb(255, 255, 255, 1);
+}
+.recipe .description p span{
+    color:rgba(148,187,233,1);
+}
+.recipe .image{
+    border-radius:0.7rem;
+    width: 80%;
+}
+.recipe .image img{
+    width: 100%;
+    height: 300px;
+}
